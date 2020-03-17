@@ -5,12 +5,12 @@ class Button extends React.Component{
   constructor(props){
     super(props);
 
-    this.onClickHander = this.onClickHander.bind(this);
+    this.onClickHandler = this.onClickHandler.bind(this);
   }
 
-  onClickHander() {
-    if (typeof this.props.onClickHander === 'function') {
-      this.props.onClickHander();
+  onClickHandler() {
+    if (typeof this.props.onClickHandler === 'function') {
+      this.props.onClickHandler();
     }
   }
 
@@ -18,11 +18,11 @@ class Button extends React.Component{
     return (
       <span
         className="Button-container"
-        onClick={this.onClickHander}
+        onClick={this.onClickHandler}
       >
         {this.props.children}
       </span>
-    );
+    )
   }
 }
 
