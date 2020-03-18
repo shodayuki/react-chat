@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './components/Button/Button';
 import CommentList from './components/CommentList/CommentList';
+import Form from './components/Form/Form';
 
 function App() {
   const comments = [
@@ -11,11 +11,9 @@ function App() {
 
   return (
     <div className="App">
-      <Button onClickHandler={() => {
-        console.log('クリックした!');
-      }}>
-        コメントする
-      </Button>
+      <Form onSubmit={(body) => {
+        console.log('body? : ', body);
+      }} />
       <CommentList comments={comments}></CommentList>
     </div>
   );
